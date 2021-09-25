@@ -74,7 +74,7 @@ git clone https://github.com/Thagoo/AnyKernel3 -b kali
 echo cloning done
 export ARCH=arm64
 export SUBARCH=arm64
-export KBUILD_BUILD_USER=Arrayfs
+export KBUILD_BUILD_USER=Ivan@Ssl
 export CROSS_COMPILE=$(pwd)/tc/bin/aarch64-linux-android-
 make mrproper
 mkdir -p out
