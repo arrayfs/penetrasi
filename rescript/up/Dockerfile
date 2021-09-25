@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-LABEL maintainer="Arrayfs <adm.arrayfs@gmail.com>"
+LABEL maintainer="Correctl <adm.arrayfs@gmail.com>"
 
 ENV \
     DEBIAN_FRONTEND=noninteractive \
