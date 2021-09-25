@@ -1,6 +1,6 @@
 FROM ubuntu:focal
 
-LABEL maintainer="Thagoo <lohitgowda56@gmail.com>"
+LABEL maintainer="Arrayfs <adm.arrayfs@gmail.com>"
 
 ENV \
     DEBIAN_FRONTEND=noninteractive \
@@ -34,8 +34,8 @@ RUN apt-get update               \
     bc
 
 RUN pip3 install datetime telethon python-dotenv GitPython
-RUN git config --global user.name "Thagoo"
-RUN git config --global user.email "lohitgowda56@gmail.com"
+RUN git config --global user.name "Correctl"
+RUN git config --global user.email "adm.arrayfs@gmail.com"
 RUN git config --global http.sslVerify false
 RUN git clone https://github.com/kdrag0n/proton-clang -b master --depth 1 --single-branch -q /tmp/proton
 RUN rm -rf /tmp/proton/.git 
