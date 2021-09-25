@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 export DEBIAN_FRONTEND=noninteractive
 export TZ=Asia/Kolkata
-ln -fs /usr/share/zoneinfo/Asia/Kolkata /etc/localtime
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
 apt-get update -qq && \
@@ -65,7 +65,7 @@ apt-get update -qq && \
 	zlib1g-dev \
 	zstd
 
-git clone -b tr-10-caf https://github.com/Thagoo/Triton_kernel_xiaomi_msm8917 triton && cd triton
+git clone -b tr-10-caf https://github.com/Correctl/msm8917-Riva-IDN Xernethun && cd Xernethun
 git clone https://github.com/Thagoo/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9 -b lineage-17.0 tc
 git clone https://github.com/Thagoo/AnyKernel3
 echo cloning done
