@@ -15,7 +15,7 @@ load_dotenv("env")
 now = datetime.now().strftime("%d%m%Y-%M")
 zip_name = "Triton-Rova-" + now
 k_out = "out/arch/arm64/boot/Image.gz-dtb"
-anyk_repo_link = "https://github.com/Thagoo/AnyKernel3"
+anyk_repo_link = "https://github.com/Correctl/AnyKernel3"
 API_ID = os.environ.get('API_ID')
 API_HASH = os.environ.get('API_HASH')
 STRING_SESSION = os.environ.get('STRING_SESSION')
@@ -34,14 +34,14 @@ def Cp_Ul():
     call('cd AnyKernel3;zip temp.zip * -r9;mv temp.zip ..', shell=True)
     os.rename('temp.zip', zip_name+'.zip')
     # Upload file to Telegram
-    client.send_file(CHANNEL_ID, file=zip_name+'.zip', caption="Triton kernel for rolex or riva \nfollow @tboxxx for more updates", force_document=True)
+    client.send_file(CHANNEL_ID, file=zip_name+'.zip', caption="Triton kernel for rolex or riva \nfollow @Arrayfs for more updates", force_document=True)
     print("Compilation Successfull \n" + zip_name)
     
 def Build():
     """ Compilation """
-    print("Compiling Triton kernel")
+    print("Compiling riva_net kernel")
     Get_AnyK()
-    os.environ['KBUILD_BUILD_USER'] = "Thago"
+    os.environ['KBUILD_BUILD_USER'] = "Ivan@Ssl"
     os.environ['KBUILD_BUILD_HOST'] = "DroneCI"
     path= os.environ['PATH']
     os.environ['PATH'] = "/tmp/proton/bin:"+path
